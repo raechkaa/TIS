@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Главная</title>
+    <style>
+        body {
+            background: linear-gradient(45deg, #EECFBA, #C5DDE8);
+            }
+         div {
+            height: 1000px;
+            background: linear-gradient(45deg, #EECFBA, #C5DDE8);
+           }
+
+    </style>
+</head>
+<body>
+    <div>
+    <h2 style="color:grey">Фильмы</h2>
+     {% for m in movies %}
+        <P><a href=m/{{m["id"]}}>{{m["name"]}}, {{m["year"]}}, {{m["country"]}}</a></P>
+    {% endfor %}
+    </div>
+</body>
+</html>
